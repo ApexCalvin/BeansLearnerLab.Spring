@@ -1,15 +1,14 @@
 package com.jellybean.SenzuBean;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Spliterator;
+import java.sql.Array;
+import java.util.*;
 import java.util.function.Consumer;
 
 public class Students extends People<Student>{
 
-    public Students(List<Student> studentList) {
-        super(studentList);
-    }
+    public Students() { super(); };
+
+    public Students(ArrayList<Student> studentList) { super(studentList); }
 
     @Override
     public Iterator<Student> iterator() {

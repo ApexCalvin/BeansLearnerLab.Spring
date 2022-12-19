@@ -1,34 +1,35 @@
 package Pre_Part10;
 
 import com.jellybean.SenzuBean.Person;
-//import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+//import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
 
 public class Person_Test {
+
     @Test
-    public void constructorTest_1() {
-        Person Calvin = new Person(123L, "Calvin");
-        String expected = "Calvin";
-        String actual = Calvin.getName();
+    public void getName_Test() {
+        Person calvin = new Person(1L, "calvin");
+        String expected = "calvin";
+        String actual = calvin.getName();
         assertEquals(expected, actual);
     }
 
     @Test
-    public void constructorTest_2() {
-        Person Calvin = new Person(123L, "Calvin");
-        Long expected = 123L;
-        Long actual = Calvin.getId();
+    public void getID_Test() {
+        Person calvin = new Person(1L, "calvin");
+        Long expected = 1L;
+        Long actual = calvin.getId();
         assertEquals(expected, actual);
     }
 
     @Test
-    public void constructorTest_3() {
-        Person Calvin = new Person(123L, "Calvin");
-        Calvin.setName("Tran");
-        String expected = "Tran";
-        String actual = Calvin.getName();
+    public void setName_Test() {
+        Person calvin = new Person(1L, "calvin");
+        calvin.setName("alex");
+        String expected = "alex";
+        String actual = calvin.getName();
         assertEquals(expected, actual);
     }
 }

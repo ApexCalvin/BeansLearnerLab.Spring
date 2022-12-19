@@ -1,16 +1,17 @@
 package com.jellybean.SenzuBean;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
 public abstract class People<T extends Person> implements Iterable<T>{
 
-    List<T> personList;
+    ArrayList<T> personList = new ArrayList<>();
 
-    public People(List<T> T) {
-        this.personList = T;
-    }
+    public People() {};
+
+    public People(ArrayList<T> personList) { this.personList = personList; }
 
     public void add(T person) {
         personList.add(person);
@@ -28,7 +29,7 @@ public abstract class People<T extends Person> implements Iterable<T>{
         personList.clear();
     };
 
-    public void addAll(Iterable<T> people) {
+    public void addAll(Iterable<T> people) { // ??
         for(T person : people) {
             add(person);
         }
@@ -43,7 +44,7 @@ public abstract class People<T extends Person> implements Iterable<T>{
         return null;
     }
 
-    public List<T> findAll() {
+    public List<T> findAll() { //GET PERSON LIST?!
         return personList;
     }
 }
